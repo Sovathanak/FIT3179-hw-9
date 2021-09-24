@@ -27,13 +27,13 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "../data/population_by_country_2020.csv"
+          "url": "https://media.githubusercontent.com/media/Sovathanak/FIT3179-hw-9/master/data/population_by_country_2020.csv"
         },
         "key": "Country",
         "fields": ["Density"]
       }
     },
-    {"calculate": "datum.Density + 0.1", "as": "Density"}
+    {"calculate": "datum.Density", "as": "Density"}
   ],
 
   "mark": {"type": "geoshape"},
@@ -42,7 +42,7 @@
       "field": "Density",
       "type": "quantitative",
       "scale": {"type": "log", 
-                "domain":[1, 10, 100, 1000, 10000, 30000], 
+                "domain":[1, 10, 100, 1000, 3000], 
                 "range":["#bcbddc","#9e9ac8","#807dba","#6a51a3", "#54278f"]}
     },
     "tooltip": [
